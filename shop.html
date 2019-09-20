@@ -1,0 +1,185 @@
+{
+  "Mysql":{  
+    "UseMysql":false,
+    "MysqlHost":"localhost",
+    "MysqlUser":"apitest",
+    "MysqlPass":"12345",
+    "MysqlDB":"apitest"
+  },  
+  "General":{  
+    "TimedPointsReward":{  
+      "Enabled":true,
+      "Interval":5,
+      "Groups":{  
+        "Default":{  
+          "Amount":5
+        },
+        "Premiums":{  
+          "Amount":15
+        }
+      }
+    },
+    "ItemsPerPage":15,
+    "ShopDisplayTime":15.0,
+    "ShopTextSize":1.3,
+    "DbPathOverride":"",
+    "DefaultKit":"vip,starter"
+  },
+  "Kits":{  
+    "starter":{  
+      "DefaultAmount":2,
+      "Price":90,
+      "Description":"Starter kit (carno with saddle)",
+      "OnlyFromSpawn":true,
+      "Items":[  
+        {  
+          "Amount":1,
+          "Quality":0,
+          "ForceBlueprint":false,
+          "Blueprint":"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_CarnoSaddle.PrimalItemArmor_CarnoSaddle'"
+        }
+      ],
+      "Dinos":[  
+        {  
+          "Level":10,
+          "Blueprint":"Blueprint'/Game/PrimalEarth/Dinos/Carno/Carno_Character_BP.Carno_Character_BP'"
+        }
+      ]
+    },
+    "vip":{  
+      "DefaultAmount":1,
+      "Description":"Vip kit for premiums (ptero)",
+      "Permissions":"Admins,Premiums",
+      "Dinos":[  
+        {  
+          "Level":20,
+          "Neutered":true,
+          "Blueprint":"Blueprint'/Game/PrimalEarth/Dinos/Ptero/Ptero_Character_BP.Ptero_Character_BP'"
+        }
+      ]
+    },
+    "tools":{  
+      "DefaultAmount":3,
+      "Price":50,
+      "MinLevel":1,
+      "MaxLevel":20,
+      "Description":"Tools kit (pike and club)",
+      "Items":[  
+        {  
+          "Amount":1,
+          "Quality":0,
+          "ForceBlueprint":false,
+          "Blueprint":"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponPike.PrimalItem_WeaponPike'"
+        },
+        {  
+          "Amount":1,
+          "Quality":0,
+          "ForceBlueprint":false,
+          "Blueprint":"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponStoneClub.PrimalItem_WeaponStoneClub'"
+        }
+      ]
+    }
+  },
+ "ShopItems":{
+    "Basic Kibble": {
+      "Type":"item",
+      "Description":"Basic Kibble x2",
+      "Price":90,
+      "Blueprint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base_XSmall.PrimalItemConsumable_Kibble_Base_XSmall'"
+    },
+    "Simple Kibble": {
+      "Type":"item",
+      "Description":"Simple Kibble x2",
+      "Price":135,
+      "Blueprint":"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base_Medium.PrimalItemConsumable_Kibble_Base_Medium'"
+    },
+    "Regular Kibble": {
+      "Type":"item",
+      "Description":"Regular Kibble x2",
+      "Price":180,
+      "Blueprint":"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base_Medium.PrimalItemConsumable_Kibble_Base_Medium'"
+    },
+    "Superior Kibble": {
+      "Type":"item",
+      "Description":"Superior Kibble x2",
+      "Price":225,
+      "Blueprint":"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base_Large.PrimalItemConsumable_Kibble_Base_Large'"
+    },
+    "Exceptional Kibble": {
+      "Type":"item",
+      "Description":"Exceptional Kibble x2",
+      "Price":270,
+      "Blueprint":"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base_XLarge.PrimalItemConsumable_Kibble_Base_XLarge'"
+    },
+    "Extraordinary Kibble": {
+      "Type":"item",
+      "Description":"Extraordinary Kibble x2",
+      "Price":315,
+      "Blueprint":"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base_Special.PrimalItemConsumable_Kibble_Base_Special'"
+    },
+    "S+ Domesticated Beehive": {
+      "Type":"item",
+      "Description":"S+ Domesticated Beehive",
+      "Price":270,
+      "Blueprint":"Blueprint’/Game/Mods/StructuresPlusMod/Misc/BeeHive/PrimalItemStructure_BeeHivePlus.PrimalItemStructure_BeeHivePlus'"
+    },
+  "SellItems":{  
+    "metal":{  
+      "Type":"item",
+      "Description":"100x stone",
+      "Price":10,
+      "Amount":100,
+      "Blueprint":"Blueprint'/Game/Mods/Stack50/Resources/PrimalItemResource_Stone_Child.PrimalItemResource_Stone_Child'"
+    }
+  },
+  "Messages":{  
+    "Sender":"ArkShop",
+    "BoughtItem":"<RichColor Color=\"0, 1, 0, 1\">You have successfully bought item</>",
+    "BoughtDino":"<RichColor Color=\"0, 1, 0, 1\">You have successfully bought dino</>",
+    "BoughtBeacon":"<RichColor Color=\"0, 1, 0, 1\">You have successfully bought beacon</>",
+    "BoughtExp":"<RichColor Color=\"0, 1, 0, 1\">You have successfully bought experience</>",
+    "ReceivedPoints":"<RichColor Color=\"1, 1, 0, 1\">You have received {0} points! (total: {1})</>",
+    "HavePoints":"You have {0} points",
+    "NoPoints":"<RichColor Color=\"1, 0, 0, 1\">You don't have enough points</>",
+    "WrongId":"<RichColor Color=\"1, 0, 0, 1\">Wrong id</>",
+    "NoPermissionsKit":"<RichColor Color=\"1, 0, 0, 1\">You don't have permission to use this kit</>",
+    "CantBuyKit":"<RichColor Color=\"1, 0, 0, 1\">You can't buy this kit</>",
+    "BoughtKit":"<RichColor Color=\"0, 1, 0, 1\">You have successfully bought {0} kit</>",
+    "AvailableKits":"Available kits for you:",
+    "NoKits":"No available kits",
+    "KitsLeft":"You have {0} {1} kits left",
+    "NoKitsLeft":"You don't have {0} kits left",
+    "CantGivePoints":"<RichColor Color=\"1, 0, 0, 1\">You can't give points to yourself</>",
+    "RidingDino":"<RichColor Color=\"1, 0, 0, 1\">You can't buy this item while riding a dino</>",
+    "SentPoints":"<RichColor Color=\"0, 1, 0, 1\">You have successfully sent {0} points to {1}</>",
+    "GotPoints":"You have received {0} points from {1}",
+    "NoPlayer":"<RichColor Color=\"1, 0, 0, 1\">Player doesn't exist</>",
+    "FoundMorePlayers":"<RichColor Color=\"1, 0, 0, 1\">Found more than one player with the given name</>",
+    "BuyUsage":"Usage: /buy id amount",
+    "ShopUsage":"Usage: /shop page",
+    "KitUsage":"Usage: /kit KitName",
+    "BuyKitUsage":"Usage: /BuyKit KitName amount",
+    "TradeUsage":"Usage: /trade 'Player Name' amount",
+    "PointsCmd":"/points",
+    "TradeCmd":"/trade",
+    "BuyCmd":"/buy",
+    "ShopCmd":"/shop",
+    "KitCmd":"/kit",
+    "BuyKitCmd":"/buykit",
+    "SellCmd":"/sell",
+    "ShopSellCmd":"/shopsell",
+    "SellUsage":"Usage: /sell id amount",
+    "NotEnoughItems":"<RichColor Color=\"1, 0, 0, 1\">You don't have enough items ({0}/{1})</>",
+    "SoldItems":"<RichColor Color=\"0, 1, 0, 1\">You have successfully sold items</>",
+    "BadLevel":"<RichColor Color=\"1, 0, 0, 1\">Required level: {0} - {1}</>",
+    "KitsListPrice":"Price: {0}",
+    "KitsListFormat":"\"{0}\" - {1}. {2} left. {3}\n",
+    "StoreListDino":"{0}) {1}. Level: {2}. Id: {3}. Price: {4}\n",
+    "StoreListItem":"{0}) {1}. Id: {2}. Price: {3}\n",
+    "StoreListFormat":"{0}",
+    "OnlyOnSpawnKit":"This kit can be used only on spawn",
+    "HelpCmd":"/shophelp",
+    "ShopMessage":"Usage: /buy id amount",
+	"HelpMessage":"This is shop help message"
+  }
+},
